@@ -12,26 +12,26 @@
 My personal notes while I'm studying statistics
 \end{abstract}
 
-\section{Data Types}
+\part{Data Types}
 
-\subsection{Categorical Data Type}
+\section{Categorical Data Type}
 A group or a set of items
 \paragraph{Hint} Think the values as labels for a group of items or individuals
-\subsubsection{Ordinal (ordered)}
+\subsection{Ordinal (ordered)}
 Values which are ranked are categorical ordinal data. 
 \paragraph{Example} Classify how much do you like a dog. Boring, Cool, Amazing. 
 \paragraph{Example} High, Med, Low
 \paragraph{Example} Letter grade, Survey Rating. If you receive an A, this is higher than an A-. An A- is ranked higher than a B+, and so on...
 
-\subsubsection{Nominal(no order)}
+\subsection{Nominal(no order)}
 Categorical nominal data are values that do not have ranked order.
 \paragraph{Example} Classify dog by the breed. Lab, pug, poodle
 \paragraph{Example} Gender, Marital Status, Breakfast items. If you ate cereal, toast, eggs, or only coffee for breakfast; there is no rank ordering associated.
 
-\subsection{Quantitative data type}
+\section{Quantitative data type}
 Numeric values that allow methematical operations.
 \paragraph{Hint} If you can add,subtract, divide, multiple and get useful infomation. Probrably it's a quantitative data type
-\subsubsection{Continous data}
+\subsection{Continous data}
 Values that can be split into smaller values
 \paragraph{Hint} Continuous data types are those that can take on decimal values
 \paragraph{Example} Age of a dog. We can split the age by years, months, days, hours, minutes, seconds,...
@@ -39,53 +39,75 @@ Values that can be split into smaller values
 \paragraph{Example} 0.1, 0.2,1.5
 \paragraph{Example} Height, Age, Income
 
-\subsubsection{Discrete data}
+\subsection{Discrete data}
 Values that are countable
 \paragraph{Example} 0,1,2,3,...
 \paragraph{Example} Pages in a book, Trees in Yard, Dogs at a Coffee Shop
 
 
-\subsubsection{Measures}
-\paragraph{Aspects}
+\subsection{Measures}
+There are four main aspects used to describe quantitative variables:
 \begin{itemize}
-\item center
-\item spread
-\item shape
-\item outliers
+\item Measures of \textbf{center}
+\item Measures of \textbf{spread}
+\item \textbf{Shape} of the distribution
+\item \textbf{Outliers}
 \end{itemize}
 
-\paragraph{Measure of center} Give an idea of the average student
-\subparagraph{mean} sum of all values divided by the count of values $ \frac{sum}{count} $
-\subparagraph{median} it's the middle values of a data set. This values can change depending if the number of values is odd or even. If it's odd, the median will be exact values in the center of the data set. For example, considering the following data set: 1, 2, 3, 3, 5, 8, 10. The mean is 3. 
+
+\subsubsection{Measure of center} Give an idea of the average student
+\paragraph{mean} sum of all values divided by the count of values $ \frac{sum}{count} $
+\paragraph{median} it's the middle values of a data set. This values can change depending if the number of values is odd or even. If it's odd, the median will be exact values in the center of the data set. For example, considering the following data set: 1, 2, 3, 3, 5, 8, 10. The mean is 3. 
 However, if the number of elements in the data set is even, the median will be the \textbf{mean} of the values in the center. Considering the following data set: 1, 2, 3, 3, 5, 8, 10, 105. The median will be $ \frac{3+5}{2} = 4 $
 
 \textbf{NOTE!} The previous examples in the \textbf{median} paragraphs consider an sorted data set.
-\subparagraph{mode} Most frequent value in a data set. For example: 1, 2, \underline{3}, \underline{3}, 5, 8, 10. The mode in this data set is 3
+\paragraph{mode} Most frequent value in a data set. For example: 1, 2, \underline{3}, \underline{3}, 5, 8, 10. The mode in this data set is 3
 A data set can contains more than one mode. For example: 5, 8, \underline{15}, 7, \underline{10}, 22, 3, 1, \underline{15}, \underline{10}. If all values appear the same number of times, usually we say there is no mode.
 
-\paragraph{Measure of spread} Give an idea of how students differ
+\subsubsection{Measure of spread}Give an idea of how students differ
+How far are points from one another
+
+\paragraph{Range}
+\paragraph{Interquartile range (IQR)}
+\paragraph{Variance} 
+\[ \frac{1}{n}\sum_{i=1}^{n}(x_{i} - \bar{x})^2 \]
+or
+\[ \frac{1}{n-1}\sum_{i=1}^{n}(x_{i} - \bar{x})^2 \]
+
+https://stats.stackexchange.com/questions/3931/intuitive-explanation-for-dividing-by-n-1-when-calculating-standard-deviation
+
+\paragraph{Standard deviation}
+The standard deviation is the square root of the variance. It is more used instenda of he variance because it shares the same units with the original data. While the variance has squared units. 
+\[ \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i} - \bar{x})^2} \]
+
+\subsubsection{Shape}
+
+\paragraph{Histogram}
+With histogram we can quicky identify the \textbf{shape} of our data. In general terms, the distribution of the data is associated with 3 shapes:
+
+\begin{itemize}
+	\item Symmetric(Normal) 
+	Draw a image showing this sape
+	\item Right-skewed 
+	Draw a image showing this sape
+	\item Left-swewed 
+	Draw a image showing this sape
+\end{itemize}
 
 
+\begin{center}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Shape & Mean vs. Median & Real world applications \\ \hline
+		Symmetric(Normal) & Mean equals Median & Height, Weight, Errors, Precipitation \\ \hline
+		Right-skewed & Mean greater Median & Amount of drugs remaining in a blood stream, time between phone calls at a call center, time intul light bulb dies \\ \hline
+		Left-swewed & Mean less than Median & Grades as percentage in many universities, age of death, asset price changes \\ \hline
+	\end{tabular}
+\end{center}
 
+TODO: add a explanation about what is a bi-modal shape of a distribution
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsubsection{Outliers}
 
 \section{Misc}
 
