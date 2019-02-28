@@ -12,7 +12,9 @@
 My personal notes while I'm studying statistics
 \end{abstract}
 
-\part{Data Types}
+\part{Descriptive statistics}
+\paragraph{Descriptive statistics} is about describing our collected data using the measures discussed in the following sections: measures of center, measures of spread, shape of the distrubution and outliers. Plot alse can be use to a better understanding of the data
+\section{Data Types}
 
 \section{Categorical Data Type}
 A group or a set of items
@@ -59,7 +61,7 @@ There are four main aspects used to describe quantitative variables:
 \paragraph{mean} sum of all values divided by the count of values $ \frac{sum}{count} $
 \paragraph{median} it's the middle values of a data set. This values can change depending if the number of values is odd or even. If it's odd, the median will be exact values in the center of the data set. For example, considering the following data set: 1, 2, 3, 3, 5, 8, 10. The mean is 3. 
 However, if the number of elements in the data set is even, the median will be the \textbf{mean} of the values in the center. Considering the following data set: 1, 2, 3, 3, 5, 8, 10, 105. The median will be $ \frac{3+5}{2} = 4 $
-
+%
 \textbf{NOTE!} The previous examples in the \textbf{median} paragraphs consider an sorted data set.
 \paragraph{mode} Most frequent value in a data set. For example: 1, 2, \underline{3}, \underline{3}, 5, 8, 10. The mode in this data set is 3
 A data set can contains more than one mode. For example: 5, 8, \underline{15}, 7, \underline{10}, 22, 3, 1, \underline{15}, \underline{10}. If all values appear the same number of times, usually we say there is no mode.
@@ -69,17 +71,24 @@ How far are points from one another
 
 \paragraph{Range}
 \paragraph{Interquartile range (IQR)}
+\[ IQR = Q_{3} - Q_{1}\]
 \paragraph{Variance} 
 \[ \frac{1}{n}\sum_{i=1}^{n}(x_{i} - \bar{x})^2 \]
-or
+or considering the Bessel's correction
 \[ \frac{1}{n-1}\sum_{i=1}^{n}(x_{i} - \bar{x})^2 \]
 
-https://stats.stackexchange.com/questions/3931/intuitive-explanation-for-dividing-by-n-1-when-calculating-standard-deviation
+%TODO explain bessels correction
 
-\paragraph{Standard deviation}
+%https://stats.stackexchange.com/questions/3931/intuitive-explanation-for-dividing-by-n-1-when-calculating-standard-deviation
+
+\paragraph{Standard deviation ($ \sigma $)}
 The standard deviation is the square root of the variance. It is more used instenda of he variance because it shares the same units with the original data. While the variance has squared units. 
-\[ \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i} - \bar{x})^2} \]
+\[ \sigma = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i} - \bar{x})^2} \]
+or considering the Bessel's correction, also called the sample standard deviation ($ s $)
+\[ s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_{i} - \bar{x})^2} \]
 
+%TODO explain bessel's correction.
+%https://classroom.udacity.com/nanodegrees/nd109/parts/a0060509-db24-41bf-9fb6-e5544550a8f3/modules/416cfbbe-053f-4cf2-bf12-4857a1db2476/lessons/5452179865/concepts/2308601260923
 \subsubsection{Shape}
 
 \paragraph{Histogram}
@@ -105,10 +114,31 @@ With histogram we can quicky identify the \textbf{shape} of our data. In general
 	\end{tabular}
 \end{center}
 
+Depending on the shape associated with our dataset, certain measures of center or spread may be better for summarizing our dataset.
+
+When we have data that follows a normal distribution, we can completely understand our dataset using the mean and standard deviation.
+
+However, if our dataset is skewed, the 5 number summary (and measures of center associated with it) might be better to summarize our dataset. 
+
+% https://www.quora.com/What-are-some-real-world-examples-of-normally-distributed-quantities
+% https://www.utdallas.edu/~scniu/OPRE-6301/documents/Important_Probability_Distributions.pdf
+% https://stats.stackexchange.com/questions/89179/real-life-examples-of-distributions-with-negative-skewness
 TODO: add a explanation about what is a bi-modal shape of a distribution
 
 \subsubsection{Outliers}
+\[ Outlier < Q_{1} - 1.5(IRQ) \]
+\[ Outlier > Q_{3} + 1.5(IRQ) \]
+ 
 
+\part{Inferential Statistics}
+\paragraph{Inferential statistics} is about using our collected data to draw conclusions to a larger population
+
+\begin{list}{}{}
+	\item \textbf{population} - our entire group of interest
+	\item \textbf{parameter} - numeric summary about a population
+	\item \textbf{sample} - subset of the population
+	\item \textbf{statistic} - numeric summary about a sample
+\end{list}
 \section{Misc}
 
 \paragraph{Percentille}
